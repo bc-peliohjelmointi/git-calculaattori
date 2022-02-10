@@ -12,6 +12,19 @@ secondNumber = Convert.ToInt32(Console.ReadLine());
 int summa = firstNumber + secondNumber;
 int erotus = firstNumber - secondNumber;
 
-Console.WriteLine("Lasketaan x + y ja x - y...");
-Console.WriteLine(firstNumber + " + " + secondNumber + " = " + summa);
-Console.WriteLine(firstNumber + " - " + secondNumber + " = " + erotus);
+
+Console.WriteLine("Lasketaanko näiden x:n ja y:n summa vai erotus?");
+string operaattorinValinta = Console.ReadLine().ToLower();
+
+if (operaattorinValinta == "summa" || operaattorinValinta == "+")
+{
+    Console.WriteLine("Lasketaan x + y...");
+    Console.WriteLine(firstNumber + " + " + secondNumber + " = " + summa);
+}
+
+else if (operaattorinValinta == "erotus" || operaattorinValinta == "-")
+{
+    Console.WriteLine("Lasketaan x - y...");
+    Console.WriteLine(firstNumber + " - " + secondNumber + " = " + erotus);
+}
+
